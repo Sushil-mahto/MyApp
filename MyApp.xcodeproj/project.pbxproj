@@ -15,6 +15,8 @@
 		CD28F13C27C0E3CE00B92EB2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CD28F13B27C0E3CE00B92EB2 /* FirebaseAuth */; };
 		CD28F13E27C0E3CE00B92EB2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CD28F13D27C0E3CE00B92EB2 /* FirebaseDatabase */; };
 		CD28F14027C0E3CE00B92EB2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CD28F13F27C0E3CE00B92EB2 /* FirebaseStorage */; };
+		CD3FFAA027F1E61600893622 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FFA9F27F1E61600893622 /* HomeUIView.swift */; };
+		CD3FFAA227F1E84B00893622 /* UserUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FFAA127F1E84B00893622 /* UserUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CD28F12E27C0E0BA00B92EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD28F13127C0E0BA00B92EB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD28F13827C0E1B900B92EB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD3FFA9F27F1E61600893622 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		CD3FFAA127F1E84B00893622 /* UserUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 		CD28F11E27C0E0B700B92EB2 = {
 			isa = PBXGroup;
 			children = (
+				CD3FFA9E27F1E5A700893622 /* views */,
 				CD28F12927C0E0B700B92EB2 /* MyApp */,
 				CD28F12827C0E0B700B92EB2 /* Products */,
 			);
@@ -74,6 +79,15 @@
 				CD28F13127C0E0BA00B92EB2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD3FFA9E27F1E5A700893622 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CD3FFA9F27F1E61600893622 /* HomeUIView.swift */,
+				CD3FFAA127F1E84B00893622 /* UserUIView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +171,8 @@
 			files = (
 				CD28F12D27C0E0B700B92EB2 /* ContentView.swift in Sources */,
 				CD28F12B27C0E0B700B92EB2 /* MyAppApp.swift in Sources */,
+				CD3FFAA027F1E61600893622 /* HomeUIView.swift in Sources */,
+				CD3FFAA227F1E84B00893622 /* UserUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

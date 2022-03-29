@@ -47,40 +47,42 @@ class AppViewModel:ObservableObject{
 }
 
 struct ContentView: View {
+    @State var menu = false
+    
+    @State var num = 0
     
     @EnvironmentObject var viewModel:AppViewModel
+    
     var body: some View {
-        NavigationView{
-            if viewModel.signIn{
-                VStack{
-                    Text("you are signed in")
-                    Button(action: {
-                        viewModel.signOut()
-                    }, label: {
-                        Text("SignOut")
-                            .foregroundColor(.blue)
-                    })
+       /* NavigationView{*/
+            VStack{
+                
+                if viewModel.signIn{
+                    HomeUIView()
+                    
+                    
+                    
+                }else{
+                    SignInView()
                 }
                 
-                
-                
-            }else{
-                SignInView()
+            }.onAppear{
+                viewModel.signIn = viewModel.isSignedIn
             }
-        }
-        .onAppear{
-            viewModel.signIn = viewModel.isSignedIn
+            
+            
         }
     }
-}
+
 
 struct SignInView: View {
     @State var email = ""
     @State var password = ""
     @EnvironmentObject var viewModel:AppViewModel
     var body: some View {
-        
+        NavigationView{
         VStack{
+            Text("WELCOME MY SITE")
             TextField("email address",text:$email)
                 .disableAutocorrection(true)
                 .autocapitalization(.none)
@@ -112,7 +114,7 @@ struct SignInView: View {
     }
     // .navigationTitle("Sign In")
 }
-
+}
 struct SignUpView: View {
     @State var email = ""
     @State var password = ""
@@ -145,7 +147,7 @@ struct SignUpView: View {
             })
         }.padding()
         Spacer()
-            //.navigationTitle("Create Account")
+            .navigationTitle("Create Account")
     }
     //.navigationTitle("Create Account")
 }
@@ -153,6 +155,8 @@ struct SignUpView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().preferredColorScheme(.dark)
+        ContentView()
+            //.environmentObject(AppViewModel)
+            .preferredColorScheme(.dark)
     }
 }
